@@ -15,12 +15,15 @@ export class GetClientByClientIdComponent implements OnInit {
 
   ngOnInit(): void {
     this.clientId = this.route.snapshot.params['clientId'];
+    console.log(this.clientId);
     this.clientService.getClientbyClientId(this.clientId).subscribe(
       selectedClient => {
         console.log(selectedClient);
         this.client=selectedClient;
+        console.log(this.client);
       },error => console.log(error)
     );
   }
+
 
 }

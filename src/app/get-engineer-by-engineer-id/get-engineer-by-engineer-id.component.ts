@@ -16,6 +16,7 @@ export class GetEngineerByEngineerIdComponent implements OnInit {
 
   ngOnInit(): void {
     this.engineerId = this.route.snapshot.params['engineerId'];
+    console.log(this.engineerId);
     this.clientService.getEngineerbyEngineerId(this.engineerId).subscribe(
     selectedEngineer => {
       console.log(selectedEngineer);

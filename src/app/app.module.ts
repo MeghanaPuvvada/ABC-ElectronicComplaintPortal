@@ -9,7 +9,10 @@ import { GetEngineerByEngineerIdComponent } from './get-engineer-by-engineer-id/
 import { GetEngineerByDomainComponent } from './get-engineer-by-domain/get-engineer-by-domain.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignOutComponent } from './sign-out/sign-out.component';
-import { ChangeComplaintStatusComponent } from './change-complaint-status/change-complaint-status.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EngineerhomepageComponent } from './engineerhomepage/engineerhomepage.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +23,14 @@ import { ChangeComplaintStatusComponent } from './change-complaint-status/change
     GetEngineerByDomainComponent,
     SignInComponent,
     SignOutComponent,
-    ChangeComplaintStatusComponent
+    EngineerhomepageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

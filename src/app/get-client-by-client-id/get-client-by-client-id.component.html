@@ -1,1 +1,17 @@
 <p>get-client-by-client-id works!</p>
+<h3>Client Details</h3>
+<hr>
+<div *ngIf = "client">
+    <div>
+        <label> <b> Client Id : </b></label> {{client.clientId}}
+    </div>
+    <div>
+        <label> <b> Client Password : </b></label> {{client.password}}
+    </div>
+    <div>
+        <label> <b> Client Address : </b></label> {{client.address}}
+    </div>
+    <div>
+        <label> <b> Client Phone number : </b></label> {{client.phoneNumber}}
+    </div>
+</div>  

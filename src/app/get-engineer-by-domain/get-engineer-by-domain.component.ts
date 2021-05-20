@@ -16,12 +16,16 @@ export class GetEngineerByDomainComponent implements OnInit {
 
   ngOnInit(): void {
     this.domain = this.route.snapshot.params['domain'];
+    console.log(this.domain);
     this.clientService.getEngineerByDomain(this.domain).subscribe(
-      selectedClient => {
-        console.log(selectedClient);
-        this.domain=selectedClient;
+      selectedEngineer => {
+        console.log(selectedEngineer);
+        this.domain=selectedEngineer;
       },error => console.log(error)
     );
   }
+  // getEngineerDetails(domain:string){
+  //   this.router.navigate(['engineer/domain',domain])
+  // }
 
 }

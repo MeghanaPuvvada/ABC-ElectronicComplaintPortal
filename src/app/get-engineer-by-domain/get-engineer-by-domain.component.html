@@ -1,1 +1,30 @@
 <p>get-engineer-by-domain works!</p>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>Engineer List</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped table-inverse table-responsive">
+            <thead class="thead-inverse">
+                <tr>
+                    <th>Engineer Id</th>
+                    <th>Engineer Name</th>
+                    <th>Engineer domain</th>
+                    
+                </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor= "let engineer of engineers">
+                        <td >{{domain.engineerId}}</td>
+                        <td>{{domain.engineerName}}</td>
+                        <td>{{domain.domain}}</td>
+                        <td>
+                            
+                            <!-- <button (click)="changeStatus(complaint.complaintId,complaint.status)" class="btn btn-danger" style="margin-left:15px">Change Status</button> -->
+                            <button (click)="getEngineerDetails(engineer.domain)" class="btn btn-info" style="margin-left:15px">Engineer Details</button>
+                        </td>
+                    </tr>
+                </tbody>
+        </table>
+    </div>
+</div>
